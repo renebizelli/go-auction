@@ -1,0 +1,3 @@
+Rodar docker: docker-compose up --build --force-recreate
+
+Usar arquivo test.http para chamadas da API.

@@ -1,0 +1,28 @@
+# Cria leilão
+POST http://localhost:8080/auctions
+Content-Type: "application/json"
+
+{
+    "product_name" : "Guitarra",
+    "category" : "musica",
+    "description" : "Guitarra usada ",
+    "condition" : 1
+}
+
+###
+
+# dar lances
+POST http://localhost:8080/bid
+Content-Type: "application/json"
+
+{
+    "auction_id" : "fa6381ad-c3d8-4b07-afcf-4dba82aa67ba",
+    "user_id" : "c3f62675-895e-4306-a5c1-bcf4df0ae7c6",
+    "amount" : 200.93
+}
+
+
+###
+
+# lance vencedor
+GET http://localhost:8080/auction/winner/fa6381ad-c3d8-4b07-afcf-4dba82aa67ba
